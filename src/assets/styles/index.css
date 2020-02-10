@@ -1,0 +1,17 @@
+@import './fonts.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#root > div {
+  height: 100%
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #dcddde;
+}
