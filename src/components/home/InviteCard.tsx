@@ -1,21 +1,82 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import styles from './invitecard.module.css';
+const ContainerEl = styled.div`
+  position: relative;
+  width: 400px;
+  max-width: 400px;
+  padding: 24px 48px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+`;
+
+const ProgressionEl = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #7289da;
+`;
+
+const HeaderTextEl = styled.h1`
+  margin: 1rem 0 1.5rem 0;
+  color: #222941;
+  font-family: Rubik, sans-serif;
+  font-size: 1.75rem;
+  text-align: center;
+`;
+
+const DescriptionTextEl = styled.p`
+  margin: 1rem 0 1.5rem 0;
+  color: #454a5d;
+  font-family: Rubik, sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+`;
+
+const ButtonResetEl = styled.button`
+  display: block;
+  width: 225px;
+  height: 40px;
+  margin: 0 auto 0.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 24px;
+  font-family: Rubik, sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+`;
+
+const PrimaryCTAEl = styled(ButtonResetEl)`
+  background-color: #222941;
+  color: #fff;
+`;
+
+const SecondaryCTAEl = styled(ButtonResetEl)`
+  border: 2px solid #222941;
+  color: #222941;
+  background-color: transparent;
+`;
 
 export default class InviteCard extends React.Component {
   render() {
     return (
-      <div className={styles['container']}>
-        <div className={styles['top-border']}></div>
+      <ContainerEl>
+        <ProgressionEl />
 
-        <h1 className={styles['header-text']}>Let's get started</h1>
+        <HeaderTextEl>Let's get started</HeaderTextEl>
 
-        <p className={styles['leading-text']}>Invite the bot on your Discord server, start playing some music and access the panel!</p>
+        <DescriptionTextEl>Invite the bot on your Discord server, start playing some music and access the panel!</DescriptionTextEl>
 
-        <button className={styles['cta-invite']}></button>
+        <PrimaryCTAEl>Invite the bot</PrimaryCTAEl>
 
-        <button className={styles['cta-panel']}></button>
-      </div>
+        <SecondaryCTAEl>Access the panel</SecondaryCTAEl>
+      </ContainerEl>
     );
   }
 }

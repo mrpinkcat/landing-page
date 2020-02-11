@@ -1,40 +1,51 @@
 import React from 'react';
+import styled from 'styled-components';
 
+import HeroText from '../components/home/HeroText';
 import InviteCard from '../components/home/InviteCard';
 import Wave from '../components/home/Wave';
 
-import styles from './home.module.css';
+const ContainerEl = styled.div`
+  position: absolute;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 6rem;
+  background: linear-gradient(0deg, rgba(53,57,63,1) 0%, rgba(75,80,89,1) 100%);
+`;
+
+const LeftPartEl = styled.div`
+  max-width: 50%;
+  width: 50%;
+  padding: 0 2rem;
+`;
+
+const RightPartEl = styled.div`
+  max-width: 50%;
+  width: 50%;
+`;
+
+const InviteCardContainerEl = styled.div`
+  float: right;
+  padding: 0 10rem;
+`;
 
 export default class Home extends React.Component {
   render() {
     return (
-      <div className={styles['container']}>
-        <div className={styles['left-part']}>
-          <h1 className={styles['hero-text']}>Music bot.</h1>
+      <ContainerEl>
+        <LeftPartEl>
+          <HeroText />
+        </LeftPartEl>
 
-          <h2 className={styles['hero-text']}>No lag spikes.</h2>
-
-          <p className={styles['leading-text']}>
-            Invite the bot and start playing tracks or<br />
-            playlists on your Discord server.
-          </p>
-
-          <p className={styles['open-source-text']}>
-            Open-source project, full source-code is available<br />
-            on the GitHub organization.
-          </p>
-        </div>
-
-        <div className={styles['right-part']}>
-          {/* Put a screenshot of the bot in action, on Discord */}
-
-          <div className={styles['invite-card-container']}>
-            <InviteCard></InviteCard>
-          </div>
-        </div>
+        <RightPartEl>
+          <InviteCardContainerEl>
+            <InviteCard />
+          </InviteCardContainerEl>
+        </RightPartEl>
 
         <Wave />
-      </div>
+      </ContainerEl>
     );
   }
 }
