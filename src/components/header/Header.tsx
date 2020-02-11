@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import logo from '../../assets/images/logo.png';
 
@@ -21,7 +21,7 @@ const HeaderEl = styled.header<HeaderProps>`
   width: 100%;
   height: 4rem;
   max-height: 4rem;
-  background-color: ${props => props.scrolledIntoView ? 'rgba(114, 137, 218, 0.75)' : 'transparent'}
+  background-color: ${props => props.scrolledIntoView ? 'rgba(114, 137, 218, 0.75)' : 'transparent'};
 `;
 
 const FlexContainerEl = styled.div`
@@ -32,11 +32,9 @@ const FlexContainerEl = styled.div`
   padding: 0 2rem;
 
   @media (min-width: 1366px) {
-    padding: 0 4rem;
-  }
-
-  @media (min-width: 1920px) {
-    padding: 0 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
   }
 `;
 
