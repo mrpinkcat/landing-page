@@ -40,8 +40,8 @@ const DescriptionTextEl = styled.p`
 const ButtonResetEl = styled.button`
   display: block;
   width: 225px;
-  height: 40px;
-  margin: 0 auto 0.75rem;
+  height: 48px;
+  margin: 0 auto 1.25rem;
   padding: 0;
   border: 0;
   border-radius: 24px;
