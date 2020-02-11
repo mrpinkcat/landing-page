@@ -65,6 +65,10 @@ const LinkEl = styled.a`
   font-size: 1.175rem;
   cursor: pointer;
   user-select: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 class Header extends React.Component<{}, HeaderState> {
