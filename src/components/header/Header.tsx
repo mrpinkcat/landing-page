@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <header style={{
-        zIndex: '1',
+        zIndex: 1,
         position: 'fixed',
         top: '0',
         left: '0',
