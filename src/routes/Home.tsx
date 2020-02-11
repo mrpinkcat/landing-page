@@ -6,7 +6,7 @@ import Services from '../components/home/services/Services';
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="home-container">
+      <div>
         <Hero />
   
         <Services />

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 import OpenSourceCategory from './OpenSourceCategory';
 import PerformanceCategory from './PerformanceCategory';
