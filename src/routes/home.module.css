@@ -1,0 +1,56 @@
+.container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 6rem;
+  background: linear-gradient(0deg, rgba(53,57,63,1) 0%, rgba(75,80,89,1) 100%);
+}
+
+.left-part {
+  max-width: 50%;
+  width: 50%;
+  padding: 0 2rem;
+}
+
+.right-part {
+  float: right;
+  max-width: 50%;
+  width: 50%;
+}
+
+.hero-text {
+  margin: 0 0 0.75rem 0;
+  color: #dcddde;
+  font-family: Rubik, sans-serif;
+  font-size: 2.75rem;
+}
+
+.leading-text {
+  margin: 1rem 0 1rem 0;
+  color: #dcddde;
+  font-family: Rubik, sans-serif;
+  font-size: 1.5rem;
+}
+
+.open-source-text {
+  margin: 1rem 0;
+  color: #dcddde;
+  opacity: 0.5;
+  font-family: Rubik, sans-serif;
+  font-size: 1.25rem;
+}
+
+.invite-card-container {}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-part,
+  .right-part {
+    max-width: 100%;
+    width: 100%;
+  }
+}

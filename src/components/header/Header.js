@@ -6,18 +6,21 @@ class Header extends React.Component {
   render() {
     return (
       <header style={{
+        zIndex: '1',
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        right: '0',
         width: '100%',
+        height: '4rem',
+        maxHeight: '4rem',
       }}>
         <div style={{
-          zIndex: '1',
-          position: 'fixed',
           display: 'flex',
           alignItems: 'center',
           alignContent: 'space-between',
-          top: '0',
-          left: '0',
-          right: '0',
-          padding: '0.5rem 1rem',
+          height: '4rem',
+          padding: '0 2rem',
         }}>
           <img src={logo} alt="Discord-Stream logo" style={{
             display: 'block',
