@@ -20,6 +20,14 @@ const FlexContainerEl = styled.div`
   align-content: space-between;
   height: 4rem;
   padding: 0 2rem;
+
+  @media (min-width: 1366px) {
+    padding: 0 4rem;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 0 6rem;
+  }
 `;
 
 const ImageLogoEl = styled.img`
@@ -49,26 +57,6 @@ const LinkEl = styled.a`
   font-size: 1.175rem;
   cursor: pointer;
   user-select: none;
-
-  span {
-    z-index: 1;
-  }
-
-  &::after {
-    transition: all 0.35s ease-in-out;
-    z-index: 0;
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    width: calc(100% + 16px);
-    height: 2px;
-    background-color: #7289da;
-  }
-
-  &:hover::after {
-    height: calc(100% + 8px);
-    border-radius: 4px;
-  }
 `;
 
 class Header extends React.Component {
@@ -80,17 +68,11 @@ class Header extends React.Component {
 
           <BrandTitleEl>Discord-Stream</BrandTitleEl>
 
-          <LinkEl>
-            <span>Login</span>
-          </LinkEl>
+          <LinkEl>Login</LinkEl>
 
-          <LinkEl>
-            <span>Invite bot</span>
-          </LinkEl>
+          <LinkEl>Invite bot</LinkEl>
 
-          <LinkEl>
-            <span>Commands</span>
-          </LinkEl>
+          <LinkEl>Commands</LinkEl>
         </FlexContainerEl>
       </HeaderEl>
     );
