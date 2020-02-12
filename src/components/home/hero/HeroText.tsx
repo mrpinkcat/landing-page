@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const ContainerEl = styled.div``;
+const ContainerEl = styled.div`
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 992px) {
+    align-items: center;
+  }
+`;
 
 const HeroTextEl = styled.h1`
   margin: 0 0 0.75rem 0;
@@ -28,7 +35,8 @@ const LeadingTextEl = styled.p`
   font-family: Rubik, sans-serif;
   font-size: 1.25rem;
 
-  @media (min-width: 425px) {
+  @media (max-width: 992px) {
+    text-align: center;
     font-size: 1.5rem;
   }
 `;
@@ -40,8 +48,9 @@ const OpenSourceTextEl = styled.p`
   font-family: Rubik, sans-serif;
   font-size: 1.125rem;
 
-  @media (min-width: 425px) {
+  @media (max-width: 992px) {
     font-size: 1.25rem;
+    text-align: center;
   }
 `;
 

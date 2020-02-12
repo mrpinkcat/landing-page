@@ -112,6 +112,10 @@ const LinkEl = styled.a`
     padding-right: 2.75rem;
     margin-right: 0;
   }
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 class Header extends React.Component<{}, HeaderState> {

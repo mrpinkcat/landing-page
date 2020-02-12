@@ -10,6 +10,16 @@ const ContainerEl = styled.div`
   border-bottom-right-radius: 4px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   background-color: #fff;
+
+  @media (max-width: 992px) {
+    width: 570px;
+    max-width: 570px;
+  }
+
+  @media (max-width: 634px) {
+    width: 100%;
+    max-width: 100%;
+  }
 `;
 
 const ProgressionEl = styled.div`
@@ -37,12 +47,28 @@ const DescriptionTextEl = styled.p`
   text-align: center;
 `;
 
+const ButtonContainerEl = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 634px) {
+    flex-direction: column;
+  }
+`;
+
 const ButtonResetEl = styled.button`
   transition: box-shadow 0.25s ease-in-out;
   display: block;
   width: 225px;
   height: 48px;
-  margin: 0 auto 1.25rem;
+  margin: 0;
+  margin-bottom: 1.25rem;
   padding: 0;
   border: 0;
   border-radius: 24px;
@@ -58,14 +84,27 @@ const ButtonResetEl = styled.button`
 `;
 
 const PrimaryCTAEl = styled(ButtonResetEl)`
-  background-color: #222941;
+  transition: background-color ease .25s;
+  background-color: rgba(34, 41, 65, 1);
   color: #fff;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+    transition: background-color ease .25s;
+    background-color: rgba(34, 41, 65, .9);
+  }
 `;
 
 const SecondaryCTAEl = styled(ButtonResetEl)`
   border: 2px solid #222941;
   color: #222941;
-  background-color: transparent;
+  background-color: rgba(34, 41, 65, 0);
+
+  &:hover, &:focus {
+    text-decoration: underline;
+    transition: background-color ease .25s;
+    background-color: rgba(34, 41, 65, .1);
+  }
 `;
 
 export default class InviteCard extends React.Component {
@@ -78,9 +117,11 @@ export default class InviteCard extends React.Component {
 
         <DescriptionTextEl>Invite the bot on your Discord server, start playing some music and access the panel!</DescriptionTextEl>
 
-        <PrimaryCTAEl>Invite the bot</PrimaryCTAEl>
+        <ButtonContainerEl>
+          <PrimaryCTAEl>Invite the bot</PrimaryCTAEl>
 
-        <SecondaryCTAEl>Access the panel</SecondaryCTAEl>
+          <SecondaryCTAEl>Access the panel</SecondaryCTAEl>
+        </ButtonContainerEl>
       </ContainerEl>
     );
   }

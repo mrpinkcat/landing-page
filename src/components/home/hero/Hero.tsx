@@ -13,16 +13,21 @@ const RelativeContainerEl = styled.div`
 
 const ContainerEl = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  padding: 6rem 2rem 8rem;
+  min-height: 90vh;
+  padding-top: 6rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
-  @media (min-width: 768px) {
-    padding: 6rem 2rem 12rem;
+  @media (max-width: 992px) {
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 10rem;
   }
 
-  @media (min-width: 992px) {
-    flex-direction: row;
+  @media (max-width: 634px) {
+    padding-bottom: 110px;
   }
 
   @media (min-width: 1366px) {
@@ -40,32 +45,40 @@ const ContainerEl = styled.div`
 
 const LeftPartEl = styled.div`
   z-index: 2;
-  max-width: 100%;
-  width: 100%;
+  max-width: 50%;
+  width: 50%;
 
-  @media (min-width: 992px) {
-    max-width: 50%;
-    width: 50%;
+  @media (max-width: 992px) {
+    max-width: 100%;
+    width: 100%;
   }
 `;
 
 const RightPartEl = styled.div`
   z-index: 2;
-  max-width: 100%;
-  width: 100%;
+  max-width: 50%;
+  width: 50%;
 
-  @media (min-width: 992px) {
-    max-width: 50%;
-    width: 50%;
+  @media (max-width: 992px) {
+    margin-top: 1rem;
+    max-width: 100%;
+    width: 100%;
   }
 `;
 
 const InviteCardContainerEl = styled.div`
-  float: right;
-  display: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 4rem;
+  padding: 0;
 
-  @media (min-width: 992px) {
-    display: block;
+  @media (max-width: 992px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 1366px) {
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
