@@ -147,6 +147,8 @@ class Header extends React.Component<{}, HeaderState> {
             <LinkEl>Invite bot</LinkEl>
 
             <LinkEl>Commands</LinkEl>
+
+            <LinkEl>GitHub</LinkEl>
           </LinksPartEl>
         </FlexContainerEl>
       </HeaderEl>
