@@ -21,7 +21,7 @@ const HeaderEl = styled.header<HeaderProps>`
   width: 100%;
   height: 4rem;
   max-height: 4rem;
-  background-color: ${props => props.scrolledIntoView ? 'rgba(114, 137, 218, 0.95)' : 'transparent'};
+  background-color: ${props => props.scrolledIntoView ? '#dcddde' : 'transparent'};
 `;
 
 const FlexContainerEl = styled.div`
@@ -38,11 +38,12 @@ const FlexContainerEl = styled.div`
   }
 `;
 
-const BrandPartEl = styled.div`
+const BrandPartEl = styled.div<HeaderProps>`
   display: flex;
   align-items: center;
   height: 100%;
   margin-right: 1rem;
+  color: ${props => props.scrolledIntoView ? '#222941' : '#dcddde'};
 
   @media (min-width: 768px) {
     margin-right: 2rem;
@@ -63,7 +64,6 @@ const BrandTitleEl = styled.h1`
   display: none;
   font-family: Rubik, sans-serif;
   font-size: 1.25rem;
-  color: #dcddde;
   white-space: nowrap;
 
   @media (min-width: 768px) {
@@ -72,12 +72,13 @@ const BrandTitleEl = styled.h1`
   }
 `;
 
-const LinksPartEl = styled.div`
+const LinksPartEl = styled.div<HeaderProps>`
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
   align-items: center;
   height: 100%;
+  color: ${props => props.scrolledIntoView ? '#43485d' : '#dcddde'};
   mask-image: linear-gradient(to right, transparent, black 30px, black 90%, transparent);
 
   @media (min-width: 768px) {
@@ -94,7 +95,7 @@ const LinkEl = styled.a`
   margin: 0 0.5rem;
   border: 0;
   border-radius: 16px;
-  color: #dcddde;
+  color: inherit;
   font-family: Rubik, sans-serif;
   font-size: 1.175rem;
   white-space: nowrap;
@@ -135,13 +136,15 @@ class Header extends React.Component<{}, HeaderState> {
     return (
       <HeaderEl scrolledIntoView={this.state.currentScroll > 0}>
         <FlexContainerEl>
-          <BrandPartEl>
+          <BrandPartEl scrolledIntoView={this.state.currentScroll > 0}>
             <ImageLogoEl src={logo} alt="Discord-Stream logo" />
 
-            <BrandTitleEl>Discord-Stream</BrandTitleEl>
+            <BrandTitleEl>
+              Discord-Stream
+            </BrandTitleEl>
           </BrandPartEl>
 
-          <LinksPartEl>
+          <LinksPartEl scrolledIntoView={this.state.currentScroll > 0}>
             <LinkEl>Login</LinkEl>
 
             <LinkEl>Invite bot</LinkEl>
