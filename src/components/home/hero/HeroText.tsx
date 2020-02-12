@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const ContainerEl = styled.div``;
+const ContainerEl = styled.div`
+  display: flex;
+  flex-direction: column;
+  
+  @media (max-width: 992px) {
+    align-items: center;
+  }
+`;
 
 const HeroTextEl = styled.h1`
   margin: 0 0 0.75rem 0;
@@ -15,6 +22,10 @@ const LeadingTextEl = styled.p`
   color: #dcddde;
   font-family: Rubik, sans-serif;
   font-size: 1.5rem;
+
+  @media (max-width: 992px) {
+    text-align: center;
+  }
 `;
 
 const OpenSourceTextEl = styled.p`
@@ -23,6 +34,10 @@ const OpenSourceTextEl = styled.p`
   opacity: 0.5;
   font-family: Rubik, sans-serif;
   font-size: 1.25rem;
+
+  @media (max-width: 992px) {
+    text-align: center;
+  }
 `;
 
 export default class HeroText extends React.Component {
