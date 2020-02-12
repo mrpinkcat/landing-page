@@ -13,7 +13,7 @@ interface HeaderProps {
 
 const HeaderEl = styled.header<HeaderProps>`
   transition: all 0.25s ease-in-out;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,7 +21,8 @@ const HeaderEl = styled.header<HeaderProps>`
   width: 100%;
   height: 4rem;
   max-height: 4rem;
-  background-color: ${props => props.scrolledIntoView ? 'rgba(114, 137, 218, 0.75)' : 'transparent'};
+  box-shadow: ${props => props.scrolledIntoView ? '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' : 'none'};
+  background-color: ${props => props.scrolledIntoView ? '#dcddde' : 'transparent'};
 `;
 
 const FlexContainerEl = styled.div`
@@ -38,18 +39,53 @@ const FlexContainerEl = styled.div`
   }
 `;
 
+const BrandPartEl = styled.div<HeaderProps>`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 1rem;
+  color: ${props => props.scrolledIntoView ? '#222941' : '#dcddde'};
+
+  @media (min-width: 768px) {
+    margin-right: 2rem;
+  }
+`;
+
 const ImageLogoEl = styled.img`
   display: block;
   height: 2rem;
   width: 2rem;
-  margin-right: 16px;
+
+  @media (min-width: 768px) {
+    margin-right: 16px;
+  }
 `;
 
 const BrandTitleEl = styled.h1`
-  margin-right: 2rem;
-  font-family: Rubik, sans-serif;
-  font-size: 1.5rem;
-  color: #dcddde;
+  display: none;
+  font-family: Karla, sans-serif;
+  font-size: 1.25rem;
+  white-space: nowrap;
+
+  @media (min-width: 768px) {
+    display: block;
+    font-size: 1.5rem;
+  }
+`;
+
+const LinksPartEl = styled.div<HeaderProps>`
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: ${props => props.scrolledIntoView ? '#43485d' : '#dcddde'};
+  mask-image: linear-gradient(to right, transparent, black 30px, black 90%, transparent);
+
+  @media (min-width: 768px) {
+    overflow: hidden;
+    mask-image: none;
+  }
 `;
 
 const LinkEl = styled.a`
@@ -57,14 +93,25 @@ const LinkEl = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   border: 0;
   border-radius: 16px;
-  color: #dcddde;
-  font-family: Rubik, sans-serif;
-  font-size: 1.175rem;
+  color: inherit;
+  font-family: Karla, sans-serif;
+  font-size: 1.125rem;
+  white-space: nowrap;
   cursor: pointer;
   user-select: none;
+
+  &:first-child {
+    padding-left: 2.75rem;
+    margin-left: 0;    
+  }
+
+  &:last-child {
+    padding-right: 2.75rem;
+    margin-right: 0;
+  }
 
   &:hover {
     text-decoration: underline;
@@ -94,15 +141,23 @@ class Header extends React.Component<{}, HeaderState> {
     return (
       <HeaderEl scrolledIntoView={this.state.currentScroll > 0}>
         <FlexContainerEl>
-          <ImageLogoEl src={logo} alt="Discord-Stream logo" />
+          <BrandPartEl scrolledIntoView={this.state.currentScroll > 0}>
+            <ImageLogoEl src={logo} alt="Discord-Stream logo" />
 
-          <BrandTitleEl>Discord-Stream</BrandTitleEl>
+            <BrandTitleEl>
+              Discord-Stream
+            </BrandTitleEl>
+          </BrandPartEl>
 
-          <LinkEl>Login</LinkEl>
+          <LinksPartEl scrolledIntoView={this.state.currentScroll > 0}>
+            <LinkEl>Login</LinkEl>
 
-          <LinkEl>Invite bot</LinkEl>
+            <LinkEl>Invite bot</LinkEl>
 
-          <LinkEl>Commands</LinkEl>
+            <LinkEl>Commands</LinkEl>
+
+            <LinkEl>GitHub</LinkEl>
+          </LinksPartEl>
         </FlexContainerEl>
       </HeaderEl>
     );

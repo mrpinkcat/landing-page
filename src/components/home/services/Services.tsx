@@ -10,6 +10,11 @@ const ContainerEl = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: 992px) {
+    padding: 0;
+  }
 
   @media (min-width: 1366px) {
     max-width: 1200px;
@@ -17,11 +22,16 @@ const ContainerEl = styled.div`
 `;
 
 const TitleEl = styled.h1`
-  margin: 0 auto 1.5rem;
-  font-family: Rubik, sans-serif;
-  font-size: 2.5rem;
+  margin: 1.5rem auto;
+  font-family: Karla, sans-serif;
+  font-size: 2rem;
   text-align: center;
   color: #222941;
+
+  @media (min-width: 992px) {
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
+  }
 `;
 
 const LeadingTextEl = styled.p`

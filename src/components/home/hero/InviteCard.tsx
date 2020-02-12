@@ -34,7 +34,7 @@ const ProgressionEl = styled.div`
 const HeaderTextEl = styled.h1`
   margin: 1rem 0 1.5rem 0;
   color: #222941;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.75rem;
   text-align: center;
 `;
@@ -63,6 +63,7 @@ const ButtonContainerEl = styled.div`
 `;
 
 const ButtonResetEl = styled.button`
+  transition: box-shadow 0.25s ease-in-out;
   display: block;
   width: 225px;
   height: 48px;
@@ -71,11 +72,15 @@ const ButtonResetEl = styled.button`
   padding: 0;
   border: 0;
   border-radius: 24px;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.125rem;
   text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
 `;
 
 const PrimaryCTAEl = styled(ButtonResetEl)`
