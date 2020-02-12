@@ -4,6 +4,7 @@ export default class Wave extends React.Component {
   render() {
     return (
       <div style={{
+        zIndex: 1,
         position: 'absolute',
         bottom: '-4px',
         left: '0',

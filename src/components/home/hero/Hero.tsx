@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import HeroText from './HeroText';
 import InviteCard from './InviteCard';
 import Wave from './Wave';
+import WaveLayer from './WaveLayer';
 
 const RelativeContainerEl = styled.div`
   position: relative;
@@ -38,6 +39,7 @@ const ContainerEl = styled.div`
 `;
 
 const LeftPartEl = styled.div`
+  z-index: 2;
   max-width: 100%;
   width: 100%;
 
@@ -48,6 +50,7 @@ const LeftPartEl = styled.div`
 `;
 
 const RightPartEl = styled.div`
+  z-index: 2;
   max-width: 100%;
   width: 100%;
 
@@ -82,6 +85,8 @@ export default class Hero extends React.Component {
           </RightPartEl>
 
           <Wave />
+
+          <WaveLayer />
         </ContainerEl>
       </RelativeContainerEl>
     );
