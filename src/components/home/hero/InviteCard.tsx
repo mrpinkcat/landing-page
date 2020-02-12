@@ -84,13 +84,13 @@ const ButtonResetEl = styled.button`
 `;
 
 const PrimaryCTAEl = styled(ButtonResetEl)`
-  transition: background-color ease .2s;
+  transition: background-color ease .25s;
   background-color: rgba(34, 41, 65, 1);
   color: #fff;
 
   &:hover, &:focus {
     text-decoration: underline;
-    transition: background-color ease .2s;
+    transition: background-color ease .25s;
     background-color: rgba(34, 41, 65, .9);
   }
 `;
@@ -102,7 +102,7 @@ const SecondaryCTAEl = styled(ButtonResetEl)`
 
   &:hover, &:focus {
     text-decoration: underline;
-    transition: background-color ease .2s;
+    transition: background-color ease .25s;
     background-color: rgba(34, 41, 65, .1);
   }
 `;
