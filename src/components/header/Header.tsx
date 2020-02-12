@@ -21,6 +21,7 @@ const HeaderEl = styled.header<HeaderProps>`
   width: 100%;
   height: 4rem;
   max-height: 4rem;
+  box-shadow: ${props => props.scrolledIntoView ? '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' : 'none'};
   background-color: ${props => props.scrolledIntoView ? '#dcddde' : 'transparent'};
 `;
 
@@ -97,18 +98,18 @@ const LinkEl = styled.a`
   border-radius: 16px;
   color: inherit;
   font-family: Karla, sans-serif;
-  font-size: 1.175rem;
+  font-size: 1.125rem;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
 
   &:first-child {
-    padding-left: 1rem;
+    padding-left: 2.75rem;
     margin-left: 0;    
   }
 
   &:last-child {
-    padding-right: 0.75rem;
+    padding-right: 2.75rem;
     margin-right: 0;
   }
 `;
