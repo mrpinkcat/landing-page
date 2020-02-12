@@ -17,12 +17,11 @@ const ContainerEl = styled.div`
   padding: 6rem 2rem 8rem;
 
   @media (min-width: 768px) {
-    min-height: 60vh;
+    padding: 6rem 2rem 12rem;
   }
 
   @media (min-width: 992px) {
     flex-direction: row;
-    min-height: 90vh;
   }
 
   @media (min-width: 1366px) {
@@ -30,10 +29,11 @@ const ContainerEl = styled.div`
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 16rem;
   }
 
   @media (min-width: 1920px) {
-    min-height: 70vh;
+    padding-bottom: 28rem;
   }
 `;
 
