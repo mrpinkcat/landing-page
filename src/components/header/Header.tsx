@@ -13,7 +13,7 @@ interface HeaderProps {
 
 const HeaderEl = styled.header<HeaderProps>`
   transition: all 0.25s ease-in-out;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
