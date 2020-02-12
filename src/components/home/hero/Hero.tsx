@@ -14,10 +14,11 @@ const ContainerEl = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 100vh;
-  padding-top: 6rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 6rem 2rem 8rem;
+
+  @media (min-width: 768px) {
+    min-height: 60vh;
+  }
 
   @media (min-width: 992px) {
     flex-direction: row;
@@ -59,19 +60,9 @@ const RightPartEl = styled.div`
 const InviteCardContainerEl = styled.div`
   float: right;
   display: none;
-  padding: 0 4rem;
 
   @media (min-width: 992px) {
     display: block;
-  }
-
-  @media (max-width: 1023px) {
-    padding: 0;
-  }
-
-  @media (min-width: 1366px) {
-    padding-left: 0;
-    padding-right: 0;
   }
 `;
 
