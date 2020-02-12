@@ -23,7 +23,7 @@ const ContainerEl = styled.div`
   @media (max-width: 992px) {
     flex-direction: column;
     min-height: 100vh;
-    padding-bottom: 220px;
+    padding-bottom: 10rem;
   }
 
   @media (max-width: 634px) {
@@ -60,7 +60,7 @@ const RightPartEl = styled.div`
   width: 50%;
 
   @media (max-width: 992px) {
-    margin-top: 20px;
+    margin-top: 1rem;
     max-width: 100%;
     width: 100%;
   }
