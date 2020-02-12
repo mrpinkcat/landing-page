@@ -6,7 +6,7 @@ const ContainerEl = styled.div``;
 const HeroTextEl = styled.h1`
   margin: 0 0 0.75rem 0;
   color: #dcddde;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 2rem;
 
   @media (min-width: 325px) {

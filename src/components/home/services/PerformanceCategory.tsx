@@ -18,7 +18,7 @@ const LogoContainerEl = styled.div``;
 const TitleEl = styled.h1`
   margin: 2.5rem 0 1rem;
   color: #222941;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.5rem;
   text-align: center;
 `;

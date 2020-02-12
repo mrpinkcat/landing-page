@@ -23,7 +23,7 @@ const ContainerEl = styled.div`
 
 const TitleEl = styled.h1`
   margin: 1.5rem auto;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 2rem;
   text-align: center;
   color: #222941;

@@ -62,7 +62,7 @@ const ImageLogoEl = styled.img`
 
 const BrandTitleEl = styled.h1`
   display: none;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.25rem;
   white-space: nowrap;
 
@@ -96,7 +96,7 @@ const LinkEl = styled.a`
   border: 0;
   border-radius: 16px;
   color: inherit;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.175rem;
   white-space: nowrap;
   cursor: pointer;

@@ -24,7 +24,7 @@ const ProgressionEl = styled.div`
 const HeaderTextEl = styled.h1`
   margin: 1rem 0 1.5rem 0;
   color: #222941;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.75rem;
   text-align: center;
 `;
@@ -46,7 +46,7 @@ const ButtonResetEl = styled.button`
   padding: 0;
   border: 0;
   border-radius: 24px;
-  font-family: Rubik, sans-serif;
+  font-family: Karla, sans-serif;
   font-size: 1.125rem;
   text-align: center;
   cursor: pointer;
